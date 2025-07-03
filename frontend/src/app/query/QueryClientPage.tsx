@@ -30,6 +30,7 @@ export default function QueryClientPage({ user }: { user: User }) {
     setLoading(true);
     try {
       const token = await getToken();
+      console.log("Token fetched:", token);
       const res = await fetch("http://localhost:8000/data/", {
         method: "GET",
         headers: {
